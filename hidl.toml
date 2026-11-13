@@ -1,0 +1,21 @@
+[lvb.flash]
+chip = "esp32p4"
+baud = 460800
+port = "/dev/ttyACM0"
+before = "default-reset"
+after = "hard-reset"
+flash_mode = "dio"
+flash_size = "2MB"
+flash_freq = "40m"
+
+[[lvb.flash.blobs]]
+addr = 0x2000
+file = "build/bootloader/bootloader.bin"
+
+[[lvb.flash.blobs]]
+addr = 0x8000
+file = "build/partition_table/partition-table.bin"
+
+[[lvb.flash.blobs]]
+addr = 0x10000
+file = "build/lvb.bin"

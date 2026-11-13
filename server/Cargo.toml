@@ -1,0 +1,11 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = "0.8.9"
+common = {path = "../common"}
+serde = { version = "1.0.229", features = ["derive"] }
+serialport = "4.10.1"
+toml = "1.2.1"
